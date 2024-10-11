@@ -15,5 +15,5 @@ response = client.audio.speech.create(
 
 # Stream the response to a file
 with open(speech_file_path, mode="wb") as f:
-    for chunk in response.iter_bytes():  # Assuming iter_bytes() yields response chunks
+    for chunk in response.iter_bytes():
         f.write(chunk)

@@ -12,7 +12,7 @@ request = requests.post(
     json={
         'prompt': 'A warrior cat riding a dragon into battle',
         'width': 1024,
-        'height': 768,
+        'height': 768
     },
 ).json()
 print(request)
