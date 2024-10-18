@@ -4,9 +4,7 @@ client = OpenAI()
 response = client.images.generate(
     model="dall-e-3",
     prompt="""
-    Celebrate the annual Running of the Chickens,
-    where the chickens of the village are released
-    and villagers chase them to the town square.
+    A warrior cat riding a dragon into battle.
     """,
     size="1024x1024",
     quality="standard",

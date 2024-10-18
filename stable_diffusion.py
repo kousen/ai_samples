@@ -11,13 +11,13 @@ response = requests.post(
     },
     files={"none": ''},
     data={
-        "prompt": "A warrior cat riding a dragon into battle",
+        "prompt": "cats in top hats and tails playing bridge",
         "output_format": "png",
     },
 )
 
 if response.status_code == 200:
-    with open("./cat_dragon.png", 'wb') as file:
+    with open("./cats_playing_bridge.png", 'wb') as file:
         file.write(response.content)
 else:
     raise Exception(str(response.json()))
