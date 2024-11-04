@@ -10,7 +10,7 @@ request = requests.post(
         'Content-Type': 'application/json',
     },
     json={
-        'prompt': 'A warrior cat riding a dragon into battle',
+        'prompt': 'Cthulhu, the Elder God from the HP Lovecraft stories, reading the latest issue of the JVM Weekly newsletter',
         'width': 1024,
         'height': 768
     },
