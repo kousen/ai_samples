@@ -7,7 +7,7 @@ client = OpenAI(
 )
 
 response = client.images.generate(
-    prompt='a warrior cat flies a dragon into battle'
+    prompt='a dystopian cityscape with a cyberpunk aesthetic',
 )
 
 print(response)
