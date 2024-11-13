@@ -26,10 +26,18 @@ response = client.chat.completions.create(
     model="llama-3.1-sonar-small-128k-online",
     messages=messages,
 )
+# print(response)
+
+
 print(response.choices[0].message.content)
 
-# When they are available, citations look to be a direct
-# child element to response, as a sibling to choices and usage
+print("Citations:")
+for index, url in enumerate(response.citations, start=1):
+    print(f"{index}. {url}")
+
+# When they are available, citations are a child element of
+# the response, as a sibling to choices and usage
+#
 # From the github question:
 # https://github.com/ppl-ai/api-discussion/discussions/54
 #
@@ -75,7 +83,6 @@ print(response.choices[0].message.content)
 #     }
 #   ]
 # }
-print(response.citations)
 
 # chat completion with streaming
 # response_stream = client.chat.completions.create(
