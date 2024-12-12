@@ -9,7 +9,7 @@ genai.configure(api_key=os.environ['GOOGLEAI_API_KEY'])
 # Download video file
 # curl -O https://storage.googleapis.com/generativeai-downloads/data/Sherlock_Jr_FullMovie.mp4
 
-path_to_video_file = 'Sherlock_Jr_FullMovie.mp4'
+path_to_video_file = '... replace with filename ...'
 
 # Upload the video using the Files API
 video_file = genai.upload_file(path=path_to_video_file)
