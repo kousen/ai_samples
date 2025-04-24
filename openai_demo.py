@@ -3,13 +3,10 @@ import datetime
 
 client = OpenAI()
 
-models = client.models.list()
-sorted_models = sorted(models, key=lambda m: m.id)
+response = client.responses.create(
+    model="gpt-4o-mini",
+    tools=[{"type": "web_search_preview"}],
+    input="What is weather going to be like tomorrow in Marlborough, CT?"
+)
 
-def format_model_details(model):
-    model_id = model.id
-    model_created = datetime.datetime.fromtimestamp(model.created)
-    return f"{model_id} {model_created}"
-
-for sorted_model in sorted_models:
-    print(format_model_details(sorted_model))
+print(response.output_text)
